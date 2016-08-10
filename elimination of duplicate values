@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Duplicate {
+	public static void main(String args[])
+	{
+		int i=0,count=0,count1=0,num=0,flag=0,j=0,k=0,size=0;
+		int [] elem=new int[5];
+		while(count!=5)
+		{
+			flag=0;
+			System.out.println((count+1)+" enter a number b/w 10-100 inclusive:");
+			Scanner sc=new Scanner(System.in);
+			num=sc.nextInt();
+			if(num<10&&num>100)
+			    {
+				System.out.println("Invalid number:");
+				break;
+				}
+			i=0;
+			while(elem[i]!=0)
+			{
+				if(num==elem[i])
+				{
+					flag=1;
+					break;
+				}
+				else
+					i++;
+			}
+			if(flag==0)
+			{
+				while(elem[j]!=0)
+					j++;
+				elem[j]=num;
+			}
+			System.out.println(" Array without duplicates are..");
+			for(k=0;k<elem.length;k++)
+				if(elem[k]!=0)
+			System.out.println(elem[k]);
+					count++;
+			}
+	}
+
+}
